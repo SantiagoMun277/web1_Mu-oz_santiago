@@ -76,3 +76,35 @@
         }
       });
     });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const fondo = document.querySelector(".bg-fondo");
+
+    // Rutas de tus imágenes dentro de la carpeta img/
+    const imagenes = [
+      "img/python.png",
+      "img/css.png",
+      "img/BLACK-END.png",
+      "img/java.png",
+      " img/proyectoInnovador.png",
+      " img/EmpresasTecnologicas.png"
+     
+    ];
+
+    let index = 0;
+
+    // Inicia con la primera
+    fondo.style.backgroundImage = `url('${imagenes[index]}')`;
+
+    // Cambia cada 3 segundos
+    setInterval(() => {
+      index = (index + 1) % imagenes.length;
+      fondo.style.backgroundImage = `url('${imagenes[index]}')`;
+    }, 3000);
+  });
+
+
+
+
+
+    
